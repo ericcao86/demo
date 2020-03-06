@@ -11,7 +11,7 @@ public class RequestDto implements IRequest {
 
     private Integer idx;//音频顺序
 
-    private Integer isLast;//是否最后一包 1是0否
+    private Integer islast;//是否最后一包 1是0否
 
 
     private Integer sampleRate;//采样率 8为8k，16为16k
@@ -41,12 +41,12 @@ public class RequestDto implements IRequest {
         this.idx = idx;
     }
 
-    public Integer getIsLast() {
-        return isLast;
+    public Integer getIslast() {
+        return islast;
     }
 
-    public void setIsLast(Integer isLast) {
-        this.isLast = isLast;
+    public void setIslast(Integer islast) {
+        this.islast = islast;
     }
 
     public Integer getSampleRate() {
@@ -58,16 +58,7 @@ public class RequestDto implements IRequest {
     }
 
 
-    @Override
-    public String toString() {
-        return "RequestDto{" +
-                "frame='" + frame + '\'' +
-                ", sid='" + sid + '\'' +
-                ", idx=" + idx +
-                ", isLast=" + isLast +
-                ", sampleRate=" + sampleRate +
-                '}';
-    }
+
 
     @Override
     public void verify() {
